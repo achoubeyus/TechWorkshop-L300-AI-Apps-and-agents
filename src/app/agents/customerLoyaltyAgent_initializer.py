@@ -58,5 +58,3 @@ with project_client:
             # toolset=toolset
         )
         print(f"Created agent, ID: {agent.id}")
-# Testing Exercise 5 task 2
-# Test 2
