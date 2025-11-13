@@ -41,5 +41,5 @@ jobs:
 
       - name: Run deploydeploy interior design agent
         run: |
-          cd app/
+          cd src/
           python app/agents/interiorDesignAgent_initializer.py
