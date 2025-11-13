@@ -19,7 +19,7 @@ with open(CL_PROMPT_TARGET, 'r', encoding='utf-8') as file:
 project_endpoint= os.environ.get("AZURE_AI_PROJECT_ENDPOINT")
 #endpoint = os.environ.get("AZURE_AI_PROJECT_ENDPOINT")
 project_client = AIProjectClient(
-    endpoint=endpoint,
+    endpoint=project_endpoint,
     credential=DefaultAzureCredential(),
 )
 #
