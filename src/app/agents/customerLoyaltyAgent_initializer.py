@@ -17,6 +17,7 @@ with open(CL_PROMPT_TARGET, 'r', encoding='utf-8') as file:
     CL_PROMPT = file.read()
 #
 project_endpoint= "https://aif-teyafqh5v6hne.services.ai.azure.com/api/projects/proj-teyafqh5v6hne"
+agent_id = os.environ["customer_loyalty"]
 #https://aif-teyafqh5v6hne.services.ai.azure.com/api/projects/proj-teyafqh5v6hne
 #endpoint = os.environ.get("AZURE_AI_PROJECT_ENDPOINT")
 
@@ -49,7 +50,7 @@ with project_client:
         agent = project_client.agents.update_agent(
             agent_id=agent.id,
             model=os.getenv("AZURE_AI_AGENT_MODEL_DEPLOYMENT_NAME"),  # Model deployment name
-            name="Zava Customer Loyalty Agent",  # Name of the agent
+            name="customer_loyalty",  # Name of the agent
             instructions=CL_PROMPT,  # Instructions for the agent
             # toolset=toolset
         )
@@ -57,7 +58,7 @@ with project_client:
     else:
         agent = project_client.agents.create_agent(
             model=os.getenv("AZURE_AI_AGENT_MODEL_DEPLOYMENT_NAME"),  # Model deployment name
-            name="Zava Customer Loyalty Agent",  # Name of the agent
+            name="customer_loyalty",  # Name of the agent
             instructions=CL_PROMPT,  # Instructions for the agent
             # toolset=toolset
         )
