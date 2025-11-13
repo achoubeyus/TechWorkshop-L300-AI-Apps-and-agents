@@ -59,3 +59,4 @@ with project_client:
         )
         print(f"Created agent, ID: {agent.id}")
 # New test
+# test with new azure_credential
