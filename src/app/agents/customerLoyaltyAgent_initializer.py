@@ -17,7 +17,7 @@ with open(CL_PROMPT_TARGET, 'r', encoding='utf-8') as file:
     CL_PROMPT = file.read()
 #
 project_endpoint= "https://aif-teyafqh5v6hne.services.ai.azure.com/api/projects/proj-teyafqh5v6hne"
-agent_id = os.environ["customer_loyalty"]
+agent_id = "asst_EiXitJbekhyM6EMuvuHaWze2"
 #https://aif-teyafqh5v6hne.services.ai.azure.com/api/projects/proj-teyafqh5v6hne
 #endpoint = os.environ.get("AZURE_AI_PROJECT_ENDPOINT")
 
