@@ -20,7 +20,8 @@ project_client = AIProjectClient(
     credential=DefaultAzureCredential(),
 )
 
-agent_id = os.environ["customer_loyalty"]
+# agent_id = os.environ["customer_loyalty"]
+agent_id = "asst_EiXitJbekhyM6EMuvuHaWze2"
 
 user_functions: Set[Callable[..., Any]] = {
     calculate_discount,
