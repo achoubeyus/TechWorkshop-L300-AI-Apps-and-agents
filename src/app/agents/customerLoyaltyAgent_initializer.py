@@ -14,7 +14,9 @@ CL_PROMPT_TARGET = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(
 with open(CL_PROMPT_TARGET, 'r', encoding='utf-8') as file:
     CL_PROMPT = file.read()
 
-project_endpoint= os.getenv("AZURE_AI_AGENT_ENDPOINT")
+#project_endpoint= os.getenv("AZURE_AI_AGENT_ENDPOINT")
+project_endpoint= "https://aif-teyafqh5v6hne.services.ai.azure.com/api/projects/proj-teyafqh5v6hne"
+
 project_client = AIProjectClient(
     endpoint=project_endpoint,
     credential=DefaultAzureCredential(),
