@@ -14,16 +14,16 @@ CL_PROMPT_TARGET = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(
 with open(CL_PROMPT_TARGET, 'r', encoding='utf-8') as file:
     CL_PROMPT = file.read()
 
-project_endpoint= os.getenv("AZURE_AI_AGENT_ENDPOINT")
-print(f"Project Endpoint: {project_endpoint}")
+#project_endpoint= os.getenv("AZURE_AI_AGENT_ENDPOINT")
+project_endpoint= "https://aif-teyafqh5v6hne.services.ai.azure.com/api/projects/proj-teyafqh5v6hne"
 
 project_client = AIProjectClient(
     endpoint=project_endpoint,
     credential=DefaultAzureCredential(),
 )
-print(f"Project Client, {project_client}")
-agent_id = os.environ["customer_loyalty"]
-print(f"Agent ID: {agent_id}")
+
+# agent_id = os.environ["customer_loyalty"]
+agent_id = "asst_EiXitJbekhyM6EMuvuHaWze2"
 
 user_functions: Set[Callable[..., Any]] = {
     calculate_discount,
