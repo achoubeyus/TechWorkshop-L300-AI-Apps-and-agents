@@ -18,8 +18,8 @@ import time
 # from opentelemetry.instrumentation.openai_v2 import OpenAIInstrumentor
 
 # Enable Azure Monitor tracing
-#application_insights_connection_string = "InstrumentationKey=1ce648bf-8788-4b6a-a255-ca471aefb31d;IngestionEndpoint=https://swedencentral-0.in.applicationinsights.azure.com/;LiveEndpoint=https://swedencentral.livediagnostics.monitor.azure.com/;ApplicationId=01339ad8-0cc6-4b53-849b-97f25b9ee8cb"
-application_insights_connection_string = os.environ["APPLICATIONINSIGHTS_CONNECTION_STRING"]
+application_insights_connection_string = "InstrumentationKey=1ce648bf-8788-4b6a-a255-ca471aefb31d;IngestionEndpoint=https://swedencentral-0.in.applicationinsights.azure.com/;LiveEndpoint=https://swedencentral.livediagnostics.monitor.azure.com/;ApplicationId=01339ad8-0cc6-4b53-849b-97f25b9ee8cb"
+#application_insights_connection_string = os.environ["APPLICATIONINSIGHTS_CONNECTION_STRING"]
 configure_azure_monitor(connection_string=application_insights_connection_string)
 # OpenAIInstrumentor().instrument()
 
